@@ -7,7 +7,7 @@ import { CategoryService } from '../shared/category.service';
 
 import { switchMap} from 'rxjs/operators';
 
-import toastr from 'toastr';
+import * as toastr from 'toastr';
   
 
 @Component({
@@ -110,8 +110,8 @@ category: Category = new Category()
    
     subscribe(
       category => this.actionsForSuccess(category),
-      error => this.actionsForError(
-  }
+      error => this.actionsForError(error)
+    )}
 
   private actionsForSuccess(category: Category){
     toastr.success('Solicitação processada com sucesso!')
