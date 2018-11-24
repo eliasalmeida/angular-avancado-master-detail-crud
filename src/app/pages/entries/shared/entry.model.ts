@@ -9,6 +9,7 @@ export class Entry{
         public paid?:boolean,
         public categoryId?:number,
         public category?:Category,
+        public description?:string
     ){}
 
     static types = {
